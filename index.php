@@ -1409,9 +1409,9 @@
         $mail->Body    = $html;
         $mail->send();
         $success = true;
-        header('location:#contact-us?success=true');
+        header('location:#contact-us?success=success');
       } catch (Exception $e) {
-        header('location:#contact-us');
+        header('location:#contact-us?error=error');
       }
     }
   }
@@ -1599,18 +1599,15 @@
             <section id="acceuil">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="images/photo-shocked-black-man-raises-hands-bewilderment-has-wide-opened-eyes-dressed-green-jumper-translates-foreign-article-uses-many-thick-dictionaries.jpg"
+                        <img src="images/1.jpg"
                             alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/technology-work-job-concept-successful-male-translator-works-remotely-writes-notebook-with-pen.jpg"
-                            alt="">
+                        <img src="images/2.jpg" alt="">
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/working-hard-party-hard-weekends-cropped-shot-woman-typing-keyboard-sitting-front-computer-monitor-freelancer-translating-new-project-writing-some-notes-note-pad.jpg"
-                            alt="">
-
+                        <img src="images/3.jpg">
                     </div>
                 </div>
             </section>
@@ -1646,8 +1643,7 @@
                 <div class="services">
                     <div class="service">
                         <div class="image-container">
-                            <img src="images/african-applicant-make-hr-laugh-job-interview-good-impression_1163-4640.jpg"
-                                alt="" />
+                            <img src="images/5.jpg" />
                         </div>
                         <h3>
                             Traduction assermentée Arabe / Français de documents
@@ -1839,18 +1835,18 @@
         </div>
     </div>
     <?php
-                      if ($_GET["success"]==true) {
-                          echo '<div class="popup">
-                          Merci pour votre Message.
-                          </div>';
-                      }
-                      else if ($_GET["success"]==false) {
-                        echo '<div class="popup error">
-                        quelque chose s`est mal passé
-                        </div>';
-                    }
+          if ($_GET["success"]=="success") {
+                 echo '<div class="popup">
+                 Merci pour votre Message.
+                 </div>';
+          }
+          else if ($_GET["error"]=="error") {
+                  echo '<div class="popup error">
+                  quelque chose s`est mal passé
+                  </div>';
+          }
                       
-                    ?>
+    ?>
     <footer>
         © Cabinet Gharibi Traductions 2022. Tous droits réservés - Site réalisé
         par <a target="_blank" href="https://weblionz.com">weblionz</a>
