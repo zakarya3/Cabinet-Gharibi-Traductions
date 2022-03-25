@@ -1402,7 +1402,7 @@
         $mail->Port       = 465;
         //Recipients
         $mail->setFrom('contact@gharibitraductions.com', 'Cabinet Gharibi');
-        $mail->addAddress('an.behhari@gmail.com', 'Anas behhari');
+        $mail->addAddress('contact@gharibitraductions.com', 'Cabinet Gharibi');
         // Content
         $mail->isHTML(true);
         $mail->Subject = "Nouveau Message de $Name | Cabinet Gharibi Traductions | مكتب غريبي للترجمة $date";
