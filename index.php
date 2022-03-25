@@ -1,5 +1,6 @@
 <?php
   error_reporting(0);
+  
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
   require './PHPMailer-master/src/Exception.php';
